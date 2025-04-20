@@ -8,6 +8,6 @@ go_binary(
         "//remote:grpc_go",
         "//arithmetic_server:arithmetic_server",
     ],
-    importpath = "saranshsaini/arithmetic_server/cmd/arithmetic_server",  # Optional, but recommended for clarity
+    importpath = "saranshsaini/arithmetic_server/cmd/arithmetic_server",
     visibility = ["//visibility:public"],
 )

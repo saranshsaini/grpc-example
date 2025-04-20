@@ -6,11 +6,11 @@ import (
 )
 
 
-type SampleServer struct {
+type ArithmeticServer struct {
 	arithmetic_pb.UnimplementedArithmeticServiceServer
 }
 
-func (s *SampleServer) Add(ctx context.Context, req *arithmetic_pb.AddRequest) (*arithmetic_pb.AddResponse, error) {
+func (s *ArithmeticServer) Add(ctx context.Context, req *arithmetic_pb.AddRequest) (*arithmetic_pb.AddResponse, error) {
 	return &arithmetic_pb.AddResponse{
 		C: req.A + req.B,
 	}, nil

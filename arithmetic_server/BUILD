@@ -9,6 +9,5 @@ go_library(
     ],
     deps = [
         "//proto:arithmetic_go_proto",
-        "//remote:grpc_go",
     ],
 )

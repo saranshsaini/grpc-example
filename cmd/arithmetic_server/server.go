@@ -14,7 +14,7 @@ import (
 
 func main() {
 	flag.Parse()
-	lis, err := net.Listen("tcp", fmt.Sprintf("localhost:9876"))
+	lis, err := net.Listen("tcp", fmt.Sprintf("localhost:50001"))
 
 	if err != nil {
 		log.Fatalf("failed to listen: %v", err)
@@ -22,10 +22,8 @@ func main() {
 
 	var opts []grpc.ServerOption
 	grpcServer := grpc.NewServer(opts...)
-	arithmetic_pb.RegisterArithmeticServiceServer(grpcServer, &arithmetic_server.SampleServer{})
+	arithmetic_pb.RegisterArithmeticServiceServer(grpcServer, &arithmetic_server.ArithmeticServer{})
 
 	fmt.Println("Starting")
 	grpcServer.Serve(lis)
-
-	fmt.Println("Hello!")
 }
