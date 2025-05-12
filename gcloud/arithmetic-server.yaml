@@ -17,7 +17,7 @@ spec:
         app: arithmetic-server
     spec:
       containers:
-      - image: saranshsaini/gke:latest
+      - image: saranshsaini/gke:1.1
         name: arithmetic-server
         ports:
         - protocol: TCP

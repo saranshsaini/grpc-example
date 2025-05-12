@@ -32,7 +32,7 @@ COPY . .
 
 # Build the binary using bazel and find its location
 RUN bazelisk build //cmd/arithmetic_server:server && \
-    find /root/.cache/bazel/_bazel_root -name server -type f -exec cp {} /build/server \;
+    cp bazel-bin/cmd/arithmetic_server/server_/server /build/server
 
 # Runtime stage
 FROM debian:bullseye-slim

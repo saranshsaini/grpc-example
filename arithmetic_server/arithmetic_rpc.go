@@ -15,3 +15,9 @@ func (s *ArithmeticServer) Add(ctx context.Context, req *arithmetic_pb.AddReques
 		C: req.A + req.B,
 	}, nil
 }
+
+func (s *ArithmeticServer) Subtract(ctx context.Context, req *arithmetic_pb.SubtractRequest) (*arithmetic_pb.SubtractResponse, error) {
+	return &arithmetic_pb.SubtractResponse{
+		C: req.A - req.B,
+	}, nil
+}
