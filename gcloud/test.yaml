@@ -1,0 +1,24 @@
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    run: app1
+  name: app1
+spec:
+  selector:
+    matchLabels:
+      run: app1
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        run: app1
+        app: app1
+    spec:
+      containers:
+      - image: grpc/java-example-hostname:1.50.2
+        name: app1
+        ports:
+        - protocol: TCP
+          containerPort: 50051
