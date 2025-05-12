@@ -7,6 +7,13 @@ alias(
 )
 
 alias(
+    name = "reflection",
+    actual = "@@gazelle~~go_deps~org_golang_google_grpc//reflection:go_default_library",
+    visibility = [
+        "//visibility:public",
+    ],
+)
+alias(
     name = "grpc_credentials_insecure",
     actual = "@@gazelle~~go_deps~org_golang_google_grpc//credentials/insecure",
     visibility = [
