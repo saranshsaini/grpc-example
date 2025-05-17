@@ -34,3 +34,12 @@ bazel-out/
 # Build files
 BUILD.bazel
 *.lock
+
+# Cargo
+arithmetic_client/target/
+**/*.rs.bk
+arithmetic_client/Cargo.lock
+
+# Generated gRPC/Protobuf files
+*.pb.go
+*.pb.rs
